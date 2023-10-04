@@ -65,7 +65,7 @@ public class Main {
 
                     System.out.println("\nLa vita del Troll ora e`: " + t1.getPv() + "/100");
 
-                    System.out.println("\nCommentatore: \nIl nostro ero assegna un colpo abbastanza scarsino al Troll!");
+                    System.out.println("\nCommentatore: \nIO BASITO! Il nostro eroe assegna un colpo abbastanza scarsino al Troll!");
                     break;
                 }
 
@@ -84,7 +84,7 @@ public class Main {
 
                         System.out.println("\nLa vita del Troll ora e`: " + t1.getPv() + "/100");
 
-                        System.out.println("\nCommentatore: \nIl nostro ero assegna un colpo molto potente al Troll!");
+                        System.out.println("\nCommentatore: \nIO BASITO! Il nostro eroe assegna un colpo molto potente al Troll!");
                     }
                     break;
                 }
@@ -104,15 +104,27 @@ public class Main {
 
                         System.out.println("\nLa vita del Troll ora e`: " + t1.getPv() + "/100");
 
-                        System.out.println("\nCommentatore: \nIl nostro ero assegna un colpo molto molto motlo potente al Troll!");
+                        System.out.println("\nCommentatore: \nIO BASITO! Il nostro eroe assegna un colpo molto molto motlo potente al Troll!");
                     }
                     break;
                 }
 
                 case 4: {
-                    System.out.println("\nHAI SCELTO DI CURARTI!");
+                    if(vCuretta != 0 && pvEroe == 100){
+                        vCuretta -= 1;
+                        System.out.println("\nHAI SCELTO DI CURARTI!");
+
+                        do{
+                            pvEroe = (float) ((Math.random() * 25));
+                        }while(pvEroe <= 20);
+
+                        System.out.println("\nCommentatore: \nIO ANCORA PIU` BASITO! Il nostro eroe decide di curarsi con il falo` tattico proprio davanti al Troll!");
+                    }
+                    break;
                 }
             }
+
+
 
 
         }while(!finisched);
