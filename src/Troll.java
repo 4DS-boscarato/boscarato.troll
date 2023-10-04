@@ -13,4 +13,9 @@ public class Troll {
         }while(pd >= 5);
         nome = "Rabid";
     }
+
+    public String getNome() {
+        return nome;
+    }
+
 }
