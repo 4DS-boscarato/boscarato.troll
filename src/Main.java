@@ -26,12 +26,13 @@ public class Main {
         int vAttaccoPesantissimo = 1;
         int vCuretta = 1;
         do{
+
             int scelta = 0;
-            float pd = 0;
-
-
+            float pdG = 0;
+            float pdT = 0;
             do{
-                System.out.println("\n-------\n" +
+                System.out.println("\n-------\n" + "E` IL TURNO ORA");
+                System.out.println("-------\n" +
                         "Cosa vuoi fare eroe?");
                 System.out.println("1) Attacco leggero" +
                         "\n2) Attacco pesante" +
@@ -54,14 +55,14 @@ public class Main {
             switch(scelta) {
                 case 1: {
                     System.out.println("\nHAI SCELTO ATTACCO LEGGERO!");
-                    pd = 0;
+                    pdG = 0;
 
                     do{
-                        pd = (float) ((Math.random() * 10));
-                    }while(pd <= 5);
+                        pdG = (float)((Math.random() * 10));
+                    }while(pdG <= 5);
 
-                    System.out.println("SCAGLI UN COLPO ABBASTANZA SCARSO DA BEN " + pd + " DANNI!");
-                    t1.danniSubiti(pd);
+                    System.out.println("SCAGLI UN COLPO ABBASTANZA SCARSO DA BEN " + pdG + " DANNI!");
+                    t1.danniSubiti(pdG);
 
                     System.out.println("\nLa vita del Troll ora e`: " + t1.getPv() + "/100");
 
@@ -73,14 +74,14 @@ public class Main {
                     if(vAttaccoPesante != 0){
                         vAttaccoPesante -= 1;
                         System.out.println("\nHAI SCELTO ATTACCO PESANTE!");
-                        pd = 0;
+                        pdG = 0;
 
                         do{
-                            pd = (float) ((Math.random() * 20));
-                        }while(pd <= 15);
+                            pdG = (float)((Math.random() * 20));
+                        }while(pdG <= 15);
 
-                        System.out.println("SCAGLI UN COLPO POTENTE DA BEN " + pd + " DANNI!");
-                        t1.danniSubiti(pd);
+                        System.out.println("SCAGLI UN COLPO POTENTE DA BEN " + pdG + " DANNI!");
+                        t1.danniSubiti(pdG);
 
                         System.out.println("\nLa vita del Troll ora e`: " + t1.getPv() + "/100");
 
@@ -93,14 +94,14 @@ public class Main {
                     if(vAttaccoPesantissimo != 0){
                         vAttaccoPesantissimo -= 1;
                         System.out.println("\nHAI SCELTO ATTACCO SUPER MEGA IPER PESANTE!");
-                        pd = 0;
+                        pdG = 0;
 
                         do{
-                            pd = (float) ((Math.random() * 40));
-                        }while(pd <= 35);
+                            pdG = (float)((Math.random() * 40));
+                        }while(pdG <= 35);
 
-                        System.out.println("SCAGLI UN COLPO SUPER POTENTENTISSIMO DA BEN " + pd + " DANNI!");
-                        t1.danniSubiti(pd);
+                        System.out.println("SCAGLI UN COLPO SUPER POTENTENTISSIMO DA BEN " + pdG + " DANNI!");
+                        t1.danniSubiti(pdG);
 
                         System.out.println("\nLa vita del Troll ora e`: " + t1.getPv() + "/100");
 
@@ -110,13 +111,17 @@ public class Main {
                 }
 
                 case 4: {
-                    if(vCuretta != 0 && pvEroe == 100){
+                    if(vCuretta != 0 && pvEroe != 100){
+                        int puntiVita = 0;
                         vCuretta -= 1;
                         System.out.println("\nHAI SCELTO DI CURARTI!");
 
                         do{
-                            pvEroe = (float) ((Math.random() * 25));
-                        }while(pvEroe <= 20);
+                            puntiVita = (int)((Math.random() * 25));
+                        }while(puntiVita <= 20);
+
+                        pvEroe += puntiVita;
+                        System.out.println("TI CURI DI  " + puntiVita + " DI DANNO!");
 
                         System.out.println("\nCommentatore: \nIO ANCORA PIU` BASITO! Il nostro eroe decide di curarsi con il falo` tattico proprio davanti al Troll!");
                     }
@@ -124,7 +129,15 @@ public class Main {
                 }
             }
 
+            System.out.println("\n-------\n" + "E` IL TURNO DI " + t1.getNome().toUpperCase() + " ORA" + "\n-------\n");
 
+            pdT = t1.getPd();
+            System.out.println("IL TROLL SCAGLIA UN BEN PIAZZATO DA " + pdT + " DANNI!");
+            pvEroe -= pdT;
+
+            System.out.println("\nLa tua vita ora e`: " + pvEroe + "/100");
+
+            System.out.println("\nCommentatore: \nIO BASITO! Il Troll decide di attaccare con una bella mina il nostro eroe!");
 
 
         }while(!finisched);
