@@ -140,6 +140,17 @@ public class Main {
             System.out.println("\nCommentatore: \nIO BASITO! Il Troll decide di attaccare con una bella mina il nostro eroe!");
 
 
+            if(pvEroe <= 0){
+                System.out.println("\n\nCommentatore: \nIO INCREDIBILMENTE BASITO! IL VINCITORE E` IL NOSTRO TROLLLLLLLL!");
+
+                finisched = true;
+            }
+
+            if(t1.getPv() <= 0){
+                System.out.println("\n\nCommentatore: \nIO INCREDIBILMENTE BASITO! IL VINCITORE E` IL NOSTRO EROEEEEEEE!");
+                finisched = true;
+            }
+
         }while(!finisched);
     }
 }
