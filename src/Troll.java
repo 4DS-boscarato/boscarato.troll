@@ -22,4 +22,7 @@ public class Troll {
         return pv;
     }
 
+    public float getPd() {
+        return pd;
+    }
 }
