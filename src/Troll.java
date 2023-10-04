@@ -9,10 +9,17 @@ public class Troll {
     public Troll(){
         pv = 100;
         do{
-            pd = (int)((Math.random()*20));
+            pd = (int)((Math.random()*30));
         }while(pd >= 5);
         nome = "Rabid";
     }
+
+    public void danniSubiti(float danniAttacco){
+        pv -= danniAttacco;
+    }
+
+
+
 
     public String getNome() {
         return nome;
