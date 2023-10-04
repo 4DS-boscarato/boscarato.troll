@@ -12,7 +12,7 @@ public class Troll {
 
         do{
             pd = (float) ((Math.random() * 30));
-        }while (pd <= 10);
+        }while (pd <= 15);
     }
 
     public void danniSubiti(float danniAttacco){
