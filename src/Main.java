@@ -21,9 +21,14 @@ public class Main {
 
         System.out.println("\n\nGAME\n");
 
+
+        int vAttaccoPesante = 2;
+        int vAttaccoPesantissimo = 1;
+        int vCuretta = 1;
         do{
             int scelta = 0;
             float pd = 0;
+
 
             do{
                 System.out.println("\n-------\n" +
@@ -65,7 +70,23 @@ public class Main {
                 }
 
                 case 2: {
-                    System.out.println("\nHAI SCELTO ATTACCO PESANTE!");
+                    if(vAttaccoPesante != 0){
+                        vAttaccoPesante -= 1;
+                        System.out.println("\nHAI SCELTO ATTACCO PESANTE!");
+                        pd = 0;
+
+                        do{
+                            pd = (float) ((Math.random() * 20));
+                        }while (pd <= 15);
+
+                        System.out.println("SCAGLI UN COLPO POTENTE DA BEN " + pd + " DANNI!");
+                        t1.danniSubiti(pd);
+
+                        System.out.println("\nLa vita del Troll ora e`: " + t1.getPv() + "/100");
+
+                        System.out.println("\nCommentatore: \nIl nostro ero assegna un colpo molto potente al Troll!");
+                    }
+                    break;
                 }
 
                 case 3: {
