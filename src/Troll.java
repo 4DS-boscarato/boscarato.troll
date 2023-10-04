@@ -18,4 +18,8 @@ public class Troll {
         return nome;
     }
 
+    public float getPv() {
+        return pv;
+    }
+
 }
