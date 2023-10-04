@@ -21,10 +21,13 @@ public class Main {
 
         System.out.println("\n\nGAME\n");
 
-        do {
+        do{
             int scelta = 0;
+            float pd = 0;
+
             do{
-                System.out.println("\nCosa vuoi fare eroe?");
+                System.out.println("\n-------\n" +
+                        "Cosa vuoi fare eroe?");
                 System.out.println("1) Attacco leggero" +
                         "\n2) Attacco pesante" +
                         "\n3) Attacco super mega iper Pesante" +
@@ -45,9 +48,33 @@ public class Main {
 
             switch(scelta) {
                 case 1: {
+                    System.out.println("\nHAI SCELTO ATTACCO LEGGERO!");
+                    pd = 0;
 
+                    do{
+                        pd = (float) ((Math.random() * 10));
+                    }while (pd <= 5);
+
+                    System.out.println("SCAGLI UN COLPO ABBASTANZA SCARSO DA BEN " + pd + " DANNI!");
+                    t1.danniSubiti(pd);
+
+                    System.out.println("\nLa vita del Troll ora e`: " + t1.getPv() + "/100");
+
+                    System.out.println("\nCommentatore: \nIl nostro ero assegna un colpo abbastanza scarsino al Troll!");
+                    break;
                 }
-                default:
+
+                case 2: {
+                    System.out.println("\nHAI SCELTO ATTACCO PESANTE!");
+                }
+
+                case 3: {
+                    System.out.println("\nHAI SCELTO ATTACCO SUPER MEGA IPER PESANTE!");
+                }
+
+                case 4: {
+                    System.out.println("\nHAI SCELTO DI CURARTI!");
+                }
             }
 
 
