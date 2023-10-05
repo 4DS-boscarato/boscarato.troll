@@ -11,7 +11,7 @@ public class Troll {
         pv = 100;
 
         do{
-            pd = (float) ((Math.random() * 30));
+            pd = (float) ((Math.random() * 25));
         }while (pd <= 15);
     }
 

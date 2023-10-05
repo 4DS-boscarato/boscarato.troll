@@ -33,10 +33,10 @@ public class Main {
                 System.out.println("\n-------\n" + "E` IL TURNO ORA");
                 System.out.println("-------\n" +
                         "Cosa vuoi fare eroe?");
-                System.out.println("1) Attacco leggero" +
-                        "\n2) Attacco pesante" +
-                        "\n3) Attacco super mega iper Pesante" +
-                        "\n4) Curata col falo` tattico");
+                System.out.println("1) Attacco leggero (infiniti)" +
+                        "\n2) Attacco pesante (2 massimo)" +
+                        "\n3) Attacco super mega iper Pesante (1 massimo)" +
+                        "\n4) Curata col falo` tattico (1 massimo) ");
 
                 System.out.print("\nInserisci la scela: ");
                 input = new Scanner(System.in);
@@ -57,8 +57,8 @@ public class Main {
                     pdG = 0;
 
                     do{
-                        pdG = (float)((Math.random() * 10));
-                    }while(pdG <= 5);
+                        pdG = (float)((Math.random() * 15));
+                    }while(pdG <= 10);
 
                     System.out.println("SCAGLI UN COLPO ABBASTANZA SCARSO DA BEN " + pdG + " DANNI!");
                     t1.danniSubiti(pdG);
@@ -76,7 +76,7 @@ public class Main {
                         pdG = 0;
 
                         do{
-                            pdG = (float)((Math.random() * 20));
+                            pdG = (float)((Math.random() * 25));
                         }while(pdG <= 15);
 
                         System.out.println("SCAGLI UN COLPO POTENTE DA BEN " + pdG + " DANNI!");
@@ -96,8 +96,8 @@ public class Main {
                         pdG = 0;
 
                         do{
-                            pdG = (float)((Math.random() * 40));
-                        }while(pdG <= 35);
+                            pdG = (float)((Math.random() * 50));
+                        }while(pdG <= 40);
 
                         System.out.println("SCAGLI UN COLPO SUPER POTENTENTISSIMO DA BEN " + pdG + " DANNI!");
                         t1.danniSubiti(pdG);
@@ -120,7 +120,7 @@ public class Main {
                         }while(puntiVita <= 20);
 
                         pvEroe += puntiVita;
-                        System.out.println("TI CURI DI  " + puntiVita + " DI DANNO!");
+                        System.out.println("TI CURI DI  " + puntiVita + " DI VITA!");
 
                         System.out.println("\nCommentatore: \nIO ANCORA PIU` BASITO! Il nostro eroe decide di curarsi con il falo` tattico proprio davanti al Troll!");
                     }
