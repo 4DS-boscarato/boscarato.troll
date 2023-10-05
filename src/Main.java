@@ -128,6 +128,12 @@ public class Main {
                 }
             }
 
+            if(t1.getPv() <= 0) {
+                System.out.println("\n\nCommentatore: \nIO INCREDIBILMENTE BASITO! IL VINCITORE E` IL NOSTRO EROEEEEEEE!");
+                finisched = true;
+                break;
+            }
+
             System.out.println("\n-------\n" + "E` IL TURNO DI " + t1.getNome().toUpperCase() + " ORA" + "\n-------\n");
 
             pdT = t1.getPd();
@@ -138,18 +144,11 @@ public class Main {
 
             System.out.println("\nCommentatore: \nIO BASITO! Il Troll decide di attaccare con una bella mina il nostro eroe!");
 
-
             if(pvEroe <= 0){
                 System.out.println("\n\nCommentatore: \nIO INCREDIBILMENTE BASITO! IL VINCITORE E` IL NOSTRO TROLLLLLLLL!");
-
                 finisched = true;
+                break;
             }
-
-            if(t1.getPv() <= 0){
-                System.out.println("\n\nCommentatore: \nIO INCREDIBILMENTE BASITO! IL VINCITORE E` IL NOSTRO EROEEEEEEE!");
-                finisched = true;
-            }
-
         }while(!finisched);
     }
 }
